@@ -50,14 +50,24 @@ h2 {
 }
 
 /* Estilo para la imagen */
+/* Estilo para la imagen */
 img {
-    border-radius: 50%; /* Hacer la imagen circular */
-    width: 500px; /* Tamaño moderado */
-    height: 500px;
-    object-fit: cover;
-    border: 4px solid #fe4f4f; /* Borde elegante */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    width: 300px; /* Tamaño más grande */
+    height: 300px; /* Mantiene proporción con el ancho */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border: 6px solid #4facfe; /* Borde más grueso y elegante */
     margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza la animación */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Agrega una sombra para resaltar */
 }
+
+/* Efecto al hacer hover sobre la imagen */
+img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen al pasar el ratón */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Hace la sombra más pronunciada */
+}
+
 
 /* Estilo para las etiquetas */
 label {
