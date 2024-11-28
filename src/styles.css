@@ -1,0 +1,86 @@
+/* Establecer el estilo general para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* Fondo de gradiente */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor general */
+.contenedor {
+    width: 100%;
+    max-width: 400px; /* Limitar el tamaño máximo */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo del formulario */
+.formulario {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    text-align: center;
+}
+
+/* Título del formulario */
+.formulario h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Texto adicional */
+.formulario p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las etiquetas */
+label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* Estilo para los campos de entrada */
+.campos {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo para los botones */
+.boton {
+    background-color: #4facfe;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.boton:hover {
+    background-color: #00f2fe;
+}
+
+/* Estilo para el texto de error */
+span {
+    color: red;
+    font-size: 12px;
+}
