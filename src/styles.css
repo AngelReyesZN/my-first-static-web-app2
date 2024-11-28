@@ -52,8 +52,8 @@ h2 {
 /* Estilo para la imagen */
 img {
     border-radius: 50%; /* Hacer la imagen circular */
-    width: 120px; /* Tamaño moderado */
-    height: 120px;
+    width: 500px; /* Tamaño moderado */
+    height: 500px;
     object-fit: cover;
     border: 4px solid #fe4f4f; /* Borde elegante */
     margin-top: 20px;
