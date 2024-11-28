@@ -53,8 +53,8 @@ h2 {
 /* Estilo para la imagen */
 img {
     border-radius: 50%; /* Hace que la imagen sea circular */
-    width: 300px; /* Tamaño más grande */
-    height: 300px; /* Mantiene proporción con el ancho */
+    width: 1000px; /* Tamaño más grande */
+    height: 1001px; /* Mantiene proporción con el ancho */
     object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
     border: 6px solid #4facfe; /* Borde más grueso y elegante */
     margin-top: 20px;
