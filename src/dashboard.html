@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Bienvenido</h1>
+        <p id="userName"></p>
+        <img id="userPhoto" alt="Foto del Usuario" style="width: 100px; height: 100px; border-radius: 50%;">
+    </div>
+
+    <script>
+        // Obtener los datos del usuario desde sessionStorage
+        const user = JSON.parse(sessionStorage.getItem('user'));
+
+        if (user) {
+            document.getElementById('userName').textContent = `${user.firstName} ${user.lastName}`;
+            document.getElementById('userPhoto').src = user.photo;
+        } else {
+            // Si no hay datos de usuario, redirigir de vuelta al login
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+
+</html>
