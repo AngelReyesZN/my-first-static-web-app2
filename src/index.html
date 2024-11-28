@@ -72,8 +72,8 @@
             const userName = document.getElementById('userName');
             const userPhoto = document.getElementById('userPhoto');
 
-            userName.textContent = `${data.nombre} ${data.apellido}`;
-            userPhoto.src = data.foto;
+           userName.textContent = `${data.firstName} ${data.lastName}`;
+           userPhoto.src = data.photo;
 
             userDetailsDiv.classList.remove('hidden');
         }
