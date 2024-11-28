@@ -1,105 +1,121 @@
+/* Importar fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 /* Establecer el estilo general para el cuerpo */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #4facfe, #00f2fe); /* Fondo de gradiente */
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6e7cff56, #00f1fe2f); /* Fondo de gradiente suave */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    text-align: center; /* Centrado de texto */
     color: #333;
 }
 
-/* Contenedor general */
+/* Contenedor principal del formulario */
 .contenedor {
-    width: 100%;
-    max-width: 400px; /* Limitar el tamaño máximo */
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-/* Estilo del formulario */
-.formulario {
-    background: white;
+    background-color: white;
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombras suaves */
-    transition: transform 0.3s ease; /* Efecto suave en el formulario */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    max-width: 450px;
+    width: 100%;
+    transition: transform 0.3s ease; /* Suavizar animaciones */
 }
 
-/* Animación de hover para el formulario */
-.formulario:hover {
-    transform: translateY(-10px);
+/* Efecto cuando el contenedor es hover */
+.contenedor:hover {
+    transform: translateY(-10px); /* Elevar ligeramente */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al hacer hover */
 }
 
-/* Título del formulario */
-.formulario h2 {
-    font-size: 28px;
+/* Título principal */
+h1 {
+    font-size: 32px;
     color: #333;
     margin-bottom: 20px;
-    text-transform: uppercase;
     font-weight: 600;
+    text-transform: uppercase; /* Hacer el título más estilizado */
 }
 
-/* Texto adicional */
-.formulario p {
+/* Subtítulo */
+h2 {
+    font-size: 18px;
     color: #666;
-    font-size: 14px;
     margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* Estilo para la imagen */
+img {
+    border-radius: 50%; /* Hacer la imagen circular */
+    width: 120px; /* Tamaño moderado */
+    height: 120px;
+    object-fit: cover;
+    border: 4px solid #fe4f4f; /* Borde elegante */
+    margin-top: 20px;
 }
 
 /* Estilo para las etiquetas */
 label {
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
     margin-bottom: 8px;
     text-align: left;
+    font-weight: 500;
 }
 
 /* Estilo para los campos de entrada */
 .campos {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 6px;
     border: 1px solid #ccc;
     margin-bottom: 20px;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
 }
 
-/* Efecto en los campos de entrada al tener el foco */
+/* Efecto al hacer foco en los campos de entrada */
 .campos:focus {
     border-color: #4facfe;
     outline: none;
 }
 
-/* Estilo para los botones */
+/* Estilo para el botón */
 .boton {
     background-color: #4facfe;
     color: white;
-    padding: 12px;
+    padding: 14px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
     width: 100%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Añadir animaciones suaves */
 }
 
-/* Efecto al pasar el ratón sobre el botón */
+/* Efecto hover para el botón */
 .boton:hover {
-    background-color: #00f2fe;
+    background-color: #00fe6e;
+    transform: scale(1.05); /* Aumentar el tamaño del botón al pasar el ratón */
 }
 
-/* Estilo para el texto de error */
+/* Efecto al hacer clic en el botón */
+.boton:active {
+    transform: scale(0.98); /* Reducir tamaño al hacer clic */
+}
+
+/* Estilo para los textos de error */
 span {
     color: red;
-    font-size: 12px;
+    font-size: 14px;
     display: block;
     margin-top: 10px;
 }
@@ -111,28 +127,28 @@ span {
     margin-top: 10px;
 }
 
-/* Agregar una animación al botón cuando se hace clic */
-.boton:active {
-    transform: scale(0.98);
-}
-
 /* Medios para pantallas pequeñas */
 @media (max-width: 480px) {
-    .formulario {
+    .contenedor {
         padding: 20px;
     }
     
-    .formulario h2 {
-        font-size: 24px;
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 16px;
     }
 
     .campos {
         font-size: 14px;
-        padding: 10px;
+        padding: 12px;
     }
 
     .boton {
-        font-size: 14px;
-        padding: 10px;
+        font-size: 16px;
+        padding: 12px;
     }
 }
+
