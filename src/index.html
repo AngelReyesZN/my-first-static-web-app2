@@ -25,11 +25,6 @@
                 <button type="button" class="boton" onclick="login()">Iniciar Sesión</button>
             </form>
         </div>
-        <div id="userDetails" class="hidden">
-            <h2>Bienvenido</h2>
-            <img id="userPhoto" alt="Foto del Usuario" style="width: 100px; height: 100px; border-radius: 50%;">
-            <p id="userName"></p>
-        </div>
     </div>
 
     <script>
@@ -52,7 +47,7 @@
                 .then(response => {
                     if (response.ok) {
                         response.json().then(data => {
-                            mostrarUsuario(data);
+                            redirigirUsuario(data);
                         }).catch(error => {
                             console.error('Error al analizar JSON:', error);
                             alert('Error al procesar los datos');
@@ -67,18 +62,14 @@
                 });
         }
 
-        function mostrarUsuario(data) {
-            const userDetailsDiv = document.getElementById('userDetails');
-            const userName = document.getElementById('userName');
-            const userPhoto = document.getElementById('userPhoto');
+        function redirigirUsuario(data) {
+            // Almacenar datos en sessionStorage para usarlos en la nueva página
+            sessionStorage.setItem('user', JSON.stringify(data));
 
-           userName.textContent = `${data.firstName} ${data.lastName}`;
-           userPhoto.src = data.photo;
-
-            userDetailsDiv.classList.remove('hidden');
+            // Redirigir a la nueva página (dashboard.html)
+            window.location.href = 'dashboard.html';
         }
     </script>
-
 </body>
 
 </html>
